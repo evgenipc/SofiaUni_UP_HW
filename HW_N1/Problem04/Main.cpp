@@ -62,7 +62,8 @@ int main() {
 		}
 	}
 	case 'N': {
-		if (abs(figureX - kingX) == abs(figureY - kingY) - 1 || abs(figureX - kingX) - 1 == abs(figureY - kingY))
+		if (((abs(figureX - kingX) == abs(figureY - kingY) - 1 )&&(abs(figureX - kingX)==1))
+			|| ((abs(figureX - kingX) - 1 == abs(figureY - kingY))&& (abs(figureX - kingX) ==2)))
 		{
 			cout << "Yes\n";
 			break;
