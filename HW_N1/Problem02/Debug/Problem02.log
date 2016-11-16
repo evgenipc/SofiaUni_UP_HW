@@ -1,6 +1,6 @@
 ﻿  Main.cpp
-c:\users\evgeni\documents\sofia uni\up\sofiauni_up_hw\hw_n1\problem02\main.cpp(20): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-c:\users\evgeni\documents\sofia uni\up\sofiauni_up_hw\hw_n1\problem02\main.cpp(40): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-c:\users\evgeni\documents\sofia uni\up\sofiauni_up_hw\hw_n1\problem02\main.cpp(50): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\evgeni\documents\sofia uni\up\sofiauni_up_hw\hw_n1\problem02\main.cpp(45): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\evgeni\documents\sofia uni\up\sofiauni_up_hw\hw_n1\problem02\main.cpp(67): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\evgeni\documents\sofia uni\up\sofiauni_up_hw\hw_n1\problem02\main.cpp(79): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
   Problem02.vcxproj -> C:\Users\Evgeni\Documents\Sofia Uni\UP\SofiaUni_UP_HW\HW_N1\Debug\Problem02.exe
   Problem02.vcxproj -> C:\Users\Evgeni\Documents\Sofia Uni\UP\SofiaUni_UP_HW\HW_N1\Debug\Problem02.pdb (Full PDB)

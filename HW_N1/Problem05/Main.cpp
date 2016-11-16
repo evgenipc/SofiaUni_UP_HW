@@ -21,14 +21,18 @@ int main() {
 	cin >> x >> y >> u >> v;
 	float distance = sqrt((x+u)*(x+u) + (y+v)*(y+v));
 	
-	if (distance <= 1)
+	if (distance < 1)
 	{
 		cout << "60\n";
 	}
-	else if (distance <= 3) {
+	else if (distance == 1 || distance == 3 || distance == 8)
+	{
+		cout << "0\n";
+	}
+	else if (distance < 3) {
 		cout << "20\n";
 	}
-	else if (distance <= 8) {
+	else if (distance < 8) {
 		cout << "10\n";
 	}
 	else {

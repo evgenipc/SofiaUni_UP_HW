@@ -17,69 +17,63 @@ using namespace std;
 
 
 int main() {
-	char figure;
+	int figureX = 0, figureY = 0, kingX = 0, kingY = 0;
+	char figure, figureXchar, kingXchar;
+
 	cin >> figure;
-	cin.ignore();
+	cin >> figureXchar >> figureY;
+	cin >> kingXchar >> kingY;
 
-	char buff1[4];
-	char buff2[4];
-	cin.getline(buff1, 4);
-	cin.getline(buff2, 4);
+	// magic numbers turn char number to int (ASCII table casted to int)
+	figureX = figureXchar - 96;
+	kingX = kingXchar - 96;
 
-
-	int figureX = buff1[0] - 96;
-	int figureY = buff1[2] - 48;
-
-	int kingX = buff2[0] - 96;
-	int kingY = buff2[2] - 48;
-
+	// Validate Input 
+	if (figureX < 1 || figureX>8 ||
+		figureY < 1 || figureY>8 ||
+		kingX < 1 || kingX>8 ||
+		kingY < 1 || kingY>8)
+	{
+		cout << "Bad input" << endl;
+		return 0;
+	}
+	// Try moves
 	switch (figure) {
 	case 'Q': {
-		if (figureX == kingX || figureY == kingY || abs(figureX - kingX) == abs(figureY - kingY)) {
-			cout << "Yes\n"; break;
-		}
-		else {
-			cout << "No\n"; break;
-		}
+		if (figureX == kingX || figureY == kingY || abs(figureX - kingX) == abs(figureY - kingY))
+			cout << "Yes\n";
+		else
+			cout << "No\n";
+		break;
 	}
 	case 'B': {
-		if (abs(figureX - kingX) == abs(figureY - kingY)) {
-			cout << "Yes\n"; break;
-		}
-		else {
+		if (abs(figureX - kingX) == abs(figureY - kingY))
+			cout << "Yes\n";
+		else
 			cout << "No\n";
-			break;
-		}
+		break;
 	}
 	case 'R': {
-		if (figureX == kingX || figureY == kingY) {
+		if (figureX == kingX || figureY == kingY)
 			cout << "Yes\n";
-			break;
-		}
-		else {
+		else
 			cout << "No\n";
-			break;
-		}
+		break;
 	}
 	case 'N': {
-		if (((abs(figureX - kingX) == abs(figureY - kingY) - 1 )&&(abs(figureX - kingX)==1))
-			|| ((abs(figureX - kingX) - 1 == abs(figureY - kingY))&& (abs(figureX - kingX) ==2)))
-		{
+		if (((abs(figureX - kingX) == abs(figureY - kingY) - 1)
+			&& (abs(figureX - kingX) == 1)) ||
+			((abs(figureX - kingX) - 1 == abs(figureY - kingY))
+				&& (abs(figureX - kingX) == 2)))
 			cout << "Yes\n";
-			break;
-		}
 		else
-		{
 			cout << "No\n";
-			break;
-		}
+		break;
 	}
 	default: {
 		cout << "Bad figure type!\n";
 		break;
+		}
 	}
-
-	}
-
 	return 0;
 }
